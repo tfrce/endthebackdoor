@@ -119,7 +119,7 @@ $(document).ready(function(){
           email: data.data.email,
           org: slug
         };
-        $.ajax('https://email-congress.herokuapp.com/shutthebackdoor', {
+        $.ajax('https://email-congress.herokuapp.com/endthebackdoor', {
           data: dbData,
           method: 'POST',
           success: function(response){
