@@ -18,27 +18,6 @@ $(function() {
     });
 });
 
-
-
-/* ==========================================================================
-   Social counts
-   ==========================================================================*/
-var shareUrl = 'https://shutthebackdoor.net';
-$.ajax('https://d28jjwuneuxo3n.cloudfront.net/?networks=facebook,twitter,googleplus&url=' + shareUrl, {
-    success: function(res, err) {
-        $.each(res, function(network, value) {
-            var count = value;
-            if (count / 10000 > 1) {
-                count = Math.ceil(count / 1000) + 'k'
-            }
-            $('[data-network="' + network + '"]').attr('count', count);
-        })
-    },
-    dataType: 'jsonp',
-    cache         : true,
-    jsonpCallback : 'myCallback'
-});
-
 /* ==========================================================================
    Signup forms
    ==========================================================================*/
@@ -72,22 +51,23 @@ if (!Object.keys) {
 $(document).ready(function(){
 
   var referalMap = {
-      'fftf': {
-          name: 'Fight for the Future',
-          policy: 'http://www.fightforthefuture.org/privacy/'
-      },
       'eff': {
           name: 'EFF',
           policy: 'https://www.eff.org/policy'
-      },
-      'dp': {
-          name: 'Demand Progress',
-          policy: 'http://www.demandprogress.org/privacy/'
-      },
-      'fp': {
-          name: 'Free Press',
-          policy: 'http://www.freepress.net/privacy-copyright'
       }
+    //   },
+    //   'fftf': {
+    //       name: 'Fight for the Future',
+    //       policy: 'http://www.fightforthefuture.org/privacy/'
+    //   },
+    //   'dp': {
+    //       name: 'Demand Progress',
+    //       policy: 'http://www.demandprogress.org/privacy/'
+    //   },
+    //   'fp': {
+    //       name: 'Free Press',
+    //       policy: 'http://www.freepress.net/privacy-copyright'
+    //   }
   };
   var referalKeys = Object.keys(referalMap);
   var referalParam = getParameterByName('r');

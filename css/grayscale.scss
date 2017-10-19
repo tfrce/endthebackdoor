@@ -1,8 +1,11 @@
+---
+---
+
 // Variables
 
-@primary: #28c3ab;
-@dark: #000;
-@light: #fff;
+$primary: #28c3ab;
+$dark: #000;
+$light: #fff;
 
 // LESS
 
@@ -10,8 +13,8 @@ body {
     width: 100%;
     height: 100%;
     font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: @light;
-    background-color: @dark;
+    color: $light;
+    background-color: $dark;
 }
 
 html {
@@ -57,7 +60,7 @@ h4 {
 }
 
 a {
-    color: @primary;
+    color: $primary;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -66,7 +69,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: darken(@primary, 20%);
+    color: darken($primary, 20%);
 }
 
 .light {
@@ -80,7 +83,7 @@ a:focus {
     border-bottom: 1px solid rgba(255,255,255,0.3);
     text-transform: uppercase;
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: @dark;
+    background-color: $dark;
 }
 
 .navbar-brand {
@@ -92,7 +95,7 @@ a:focus {
 }
 
 .navbar-custom a {
-    color: @light;
+    color: $light;
 }
 
 .navbar-custom .nav li a {
@@ -111,7 +114,7 @@ a:focus {
 .navbar-toggle {
     padding: 4px 6px;
     font-size: 16px;
-    color: @light;
+    color: $light;
 }
 
 .navbar-toggle:focus,
@@ -132,7 +135,7 @@ a:focus {
 
     .top-nav-collapse {
         padding: 0;
-        background-color: @dark;
+        background-color: $dark;
     }
 
     .navbar-custom.top-nav-collapse {
@@ -148,9 +151,9 @@ a:focus {
     height: auto;
     padding: 100px 0;
     text-align: center;
-    color: @light;
+    color: $light;
     background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
-    background-color: @dark;
+    background-color: $dark;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -181,8 +184,16 @@ a:focus {
     background-color: #87c717;
 }
 
+#backdoors {
+    background-color: #ddd;
+    color: #222;
+    padding-bottom: 40px;
+    margin-top: 50px;
+}
+
 #backdoors p {
     margin-bottom:20px;
+    text-align: left;
 }
 
 @media(min-width:767px) {
@@ -205,10 +216,10 @@ a:focus {
     height: 70px;
     margin-top: 15px;
     padding: 7px 16px;
-    border: 2px solid @light;
+    border: 2px solid $light;
     border-radius: 35px;
     font-size: 40px;
-    color: @light;
+    color: $light;
     background: transparent;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
@@ -218,7 +229,7 @@ a:focus {
 .btn-circle:hover,
 .btn-circle:focus {
     outline: none;
-    color: @light;
+    color: $light;
     background: rgba(255,255,255,0.1);
 }
 
@@ -232,6 +243,7 @@ a:focus {
 .page-scroll .btn-circle:hover i.animated {
     -webkit-animation-name: pulse;
     -moz-animation-name: pulse;
+    animation-name: pulse;
     -webkit-animation-duration: 1.5s;
     -moz-animation-duration: 1.5s;
     -webkit-animation-iteration-count: infinite;
@@ -240,8 +252,8 @@ a:focus {
     -moz-animation-timing-function: linear;
 }
 
-@-webkit-keyframes pulse {
-    0 {
+@keyframes pulse {
+    0% {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
@@ -257,23 +269,6 @@ a:focus {
     }
 }
 
-@-moz-keyframes pulse {
-    0 {
-        -moz-transform: scale(1);
-        transform: scale(1);
-    }
-
-    50% {
-        -moz-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-
-    100% {
-        -moz-transform: scale(1);
-        transform: scale(1);
-    }
-}
-
  // Content Sections
 
  .content-section {
@@ -283,9 +278,9 @@ a:focus {
 .download-section {
     width: 100%;
     padding: 50px 0;
-    color: @light;
+    color: $light;
     background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-    background-color: @dark;
+    background-color: $dark;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -314,7 +309,7 @@ blockquote {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 160px;
+        padding-top: 140px;
     }
 
     .download-section {
@@ -339,21 +334,21 @@ blockquote {
 }
 
 .btn-default {
-    border: 1px solid @primary;
-    color: @primary;
+    border: 1px solid $primary;
+    color: $primary;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 2px solid @primary;
+    border: 2px solid $primary;
     outline: none;
-    color: @dark;
-    background-color: @primary;
+    color: $dark;
+    background-color: $primary;
 }
 
 .btn-huge {
-    border: 2px solid @primary;
+    border: 2px solid $primary;
     padding: 10px 25px;
     font-size: 26px;
 }
@@ -478,7 +473,7 @@ section#footer {
         width:54px;
         height:54px;
         z-index: 0;
-        margin-top: 40px;
+        margin-top: 0;
 }
 .floating-share {
     position: fixed;
@@ -495,7 +490,7 @@ section#footer {
 @media all and (max-width: 991px) {
     #call .share-buttons {
         display: block;
-        margin-top: 50px;
+        margin-top: 0;
     }
 }
 .sicon {
@@ -536,37 +531,25 @@ section#footer {
         position: relative;
 }
 
-.social-count:after {
-        background: #fff;
-        border: 1px solid #efefef;
-        border-radius: 2px;
-        top: -34px;
-        color: #444;
-        content: attr(count);
-        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+// .social-count:after {
+//         background: #fff;
+//         border: 1px solid #efefef;
+//         border-radius: 2px;
+//         top: -34px;
+//         color: #444;
+//         content: attr(count);
+//         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 
-        display: block;
-        left: 0px;
-        width: 54px;
-        padding: 5px;
-        text-align: center;
-        position: absolute;
-        text-shadow: 0 1px 0 #000;
-        white-space: nowrap;
-}
+//         display: block;
+//         left: 0px;
+//         width: 54px;
+//         padding: 5px;
+//         text-align: center;
+//         position: absolute;
+//         text-shadow: 0 1px 0 #000;
+//         white-space: nowrap;
+// }
 
-.social-count:before {
-        border: solid;
-        border: 1px solid #fff;
-        border-color: #111 transparent;
-        border-color: #fff transparent;
-        border-width: .4em .4em 0 .4em;
-        top: -4px;
-        content: "";
-        display: block;
-        left: 22px;
-        position: absolute;
-}
 .reset-message {
   text-align: center;
 }
