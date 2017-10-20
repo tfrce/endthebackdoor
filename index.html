@@ -99,7 +99,7 @@
                             </a> -->
                         </div>
                     
-                    <div class="page-scroll"><a href="#call" class="btn btn-default btn-huge hidden-xs">Call now</a></div>
+                    <div class="page-scroll"><a href="#call" class="btn btn-default btn-huge">Call now</a></div>
                         <div class="page-scroll">
                             <a href="#backdoors" class="btn btn-circle">
                                 <i class="icon-angle-double-down animated"></i>
@@ -175,12 +175,19 @@
 
                         <form method="get" action="https://call-congress.taskforce.is/create" id="tf-call-tool" role="form">
                             <div class="form-group">
-                                <label for="tf-phone-number" id="tf-phone-number-label" class="sr-only">Phone Number</label>
-                                <input type="text" required="required" class="form-control input-lg" id="tf-phone-number" placeholder="Your phone number">
+                                <label for="tf-zip-code" id="tf-zip-code-label">Your Zip Code:</label>
+                                <input type="text" required="required" class="form-control input-lg" id="tf-zip-code" placeholder="012345">
+                            </div>
+                            <div class="form-group">
+                                <label for="tf-phone-number" id="tf-phone-number-label">Your Phone Number:</label>
+                                <input type="text" required="required" class="form-control input-lg" id="tf-phone-number" placeholder="123-456-7890">
                             </div>
                             <input id="tf-submit" class="btn btn-default btn-huge" type="Submit"  data-waiting-text="Calling Now" value="Call Now">
                             <p class="reset-message" style="display: none;">If your call doesn't come through, click <a href="" id="tf-reset">here</a> to try again</p>
                         </form>
+
+                        <!-- <style>iframe{width:100%}</style><iframe src="https://call.eff.org/api/campaign/9/embed_iframe.html" frameBorder="0" scrolling="no" id="CallPowerFrame"></iframe><script src="https://call.eff.org/static/embed/iframeResizer.min.js"></script><script type="text/javascript">iFrameResize({checkOrigin: false}, '#CallPowerFrame');</script> -->
+
 
                       <div id="tf-call-widget-success" style="display: none;">
                     <h4>What to say</h4>
@@ -197,7 +204,7 @@
                         </script>
                   </div>
 
-                    <div class="visible-xs">
+                    <div class="visible-xs mobile-call-section">
                         <p>Press the button below and we'll connect you to your representative and you can tell them to vote for the amendment.</p>
                         <a class="btn btn-default btn-huge" href="tel:+1-415-419-8672">Call now</a>
                     </div>
@@ -273,6 +280,11 @@
     <script type="text/javascript" src="js/call-widget.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+    
+    <!-- CallPower JavaScript -->
+    <script type="text/javascript">var CallPowerOptions = {}; CallPowerOptions.form = jQuery("#tf-call-tool"); CallPowerOptions.phoneField = jQuery("#tf-phone-number"); CallPowerOptions.locationField = jQuery("#tf-zip-code"); CallPowerOptions.scriptDisplay = "overlay";</script><script type="text/javascript" src="https://call.eff.org/api/campaign/9/embed.js"></script>
+
+
     <!-- Piwik -->
 <script type="text/javascript">
   var _paq = _paq || [];

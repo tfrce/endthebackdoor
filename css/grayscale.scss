@@ -49,6 +49,7 @@ h4 {
     text-transform: none;
     font-weight: 400;
     font-size:24px;
+    line-height: 1.6;
 }
 
 @media(min-width:767px) {
@@ -187,8 +188,15 @@ a:focus {
 #backdoors {
     background-color: #ddd;
     color: #222;
-    padding-bottom: 40px;
-    margin-top: 50px;
+    padding-bottom: 80px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    @media (max-width: 767px) {
+        margin: 0;
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
 }
 
 #backdoors p {
@@ -274,17 +282,21 @@ a:focus {
  .content-section {
     padding-top: 120px;
 }
-
-.download-section {
-    width: 100%;
-    padding: 50px 0;
-    color: $light;
+#amendment.content-section {
     background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
     background-color: $dark;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    @media (max-width: 767px) {
+        padding-top:50px;
+    }
+}
+.download-section {
+    width: 100%;
+    padding: 50px 0;
+    color: $light;
 }
 .logos {
     margin-top:20px;
@@ -313,7 +325,7 @@ blockquote {
     }
 
     .download-section {
-        padding: 100px 0;
+        padding: 0 0 120px 0;
     }
 
     #map {
@@ -404,7 +416,31 @@ body {
 section#call {
     background-color: #333;
     padding-bottom:100px;
+
+    @media (max-width: 767px) {
+        padding-top: 90px;
+        padding-bottom: 10px;
+    }
 }
+
+#tf-call-tool {
+    label {
+        text-align: left;
+        display:block;
+        float: left;
+        margin-top: 10px;
+        font-size: 15px;
+        font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;    
+    }
+    .reset-message {
+        margin-top: 10px;
+    }
+}
+
+.mobile-call-section {
+    margin-bottom:20px;
+}
+
 
 .email-signup {
     label {
@@ -458,6 +494,12 @@ section#footer {
     padding-top:30px;
     p {
         font-size: 14px;
+    }
+    @media (max-width: 767px) {
+        padding-top: 0;
+        h4 {
+            margin-top: 50px;
+        }
     }
 }
 
