@@ -302,7 +302,11 @@ a:focus {
     margin-top:20px;
     margin-bottom:20px;
     line-height: 3.1;
-    
+    .eff-logo {
+        @media (max-width: 400px) {
+            max-width: 280px;
+        }
+    }
 }
 
 #map {
