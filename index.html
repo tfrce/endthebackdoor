@@ -166,14 +166,13 @@
                 <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                 <h2>Call Now: It only takes 2 minutes</h2>
-                <p class="hidden-xs">Enter your phone number below and we'll call and connect you to your representatives, and you can tell them to support the amendment.</p>
+                <p class="hidden-xs">Enter your phone number below and we'll call and connect you to your representatives, and you can tell them to improve the Liberty Act.</p>
 
                 <div id="tf-call-widget-container" class="hidden-xs">
                   <div id="tf-call-widget-form">
-                    <h4>What to say</h4>
-                       <blockquote>Hi, I'm one of your constituents, and I’m calling on you to improve the Liberty Act to end the NSA’s backdoor search loophole. Please support amendments to strengthen the Liberty Act so that government agents can’t access Americans’ communications without a warrant.</blockquote>
-
-                        <form method="get" action="https://call-congress.taskforce.is/create" id="tf-call-tool" role="form">
+                    <!-- <h4>What to say</h4>
+                       <blockquote>Hi, I'm one of your constituents, and I’m calling on you to improve the Liberty Act to end the NSA’s backdoor search loophole. Please support amendments to strengthen the Liberty Act so that government agents can’t access Americans’ communications without a warrant.</blockquote>-->
+                        <!--<form method="get" action="https://call-congress.taskforce.is/create" id="tf-call-tool" role="form">
                             <div class="form-group">
                                 <label for="tf-zip-code" id="tf-zip-code-label">Your Zip Code:</label>
                                 <input type="text" required="required" class="form-control input-lg" id="tf-zip-code" placeholder="012345">
@@ -184,7 +183,20 @@
                             </div>
                             <input id="tf-submit" class="btn btn-default btn-huge" type="Submit"  data-waiting-text="Calling Now" value="Call Now">
                             <p class="reset-message" style="display: none;">If your call doesn't come through, click <a href="" id="tf-reset">here</a> to try again</p>
-                        </form>
+                        </form> -->
+
+                        <script type="text/javascript">
+                            var ac_embed = {};
+                            ac_embed.no_css = false; // remove all default styles
+                            ac_embed.css_content = "#style_tag"; // specify an element which itself contains some styles
+                        </script>
+                        <script id="style_tag" type="text/x-css-content">
+                            body {
+                                background-color: #333333;
+                            }
+                        </script>
+                        <script type="text/javascript" src="https://act.eff.org/action/embed"></script>
+                        <a class="action-center-widget" href="https://act.eff.org/action/end-the-nsa-s-backdoor-to-the-internet">Take part in the action!</a>                        
 
                         <!-- <style>iframe{width:100%}</style><iframe src="https://call.eff.org/api/campaign/9/embed_iframe.html" frameBorder="0" scrolling="no" id="CallPowerFrame"></iframe><script src="https://call.eff.org/static/embed/iframeResizer.min.js"></script><script type="text/javascript">iFrameResize({checkOrigin: false}, '#CallPowerFrame');</script> -->
 
@@ -195,13 +207,7 @@
                           <p><strong>You can press * at any time to hang up and call the next representative.</strong></p>
                           <!--<p id="tf-reset">Call didn't come through? Try again.</p>-->
                         </div>
-                        <span id="tf-error-text"></span>
                       </div>
-                        <script>
-                          var tforce_config = {
-                            campaign: 'lofgren-nsa-calltool'
-                          };
-                        </script>
                   </div>
 
                     <div class="visible-xs mobile-call-section">
